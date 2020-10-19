@@ -67,4 +67,4 @@ def updateUser(id):
     return jsonify({'msg': 'user updated'})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='https://python-jor.herokuapp.com', port=5000)
