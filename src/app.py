@@ -4,7 +4,9 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-app.config['MONGO_URI']='mongodb+srv://userMaster:root@cluster0.achiw.mongodb.net/pythonreactdb'
+#app.config['MONGO_URI']='mongodb+srv://userMaster:root@cluster0.achiw.mongodb.net/pythonreactdb'
+
+app.config['MONGO_URI']='mongodb+srv://userMaster:root@cluster0.achiw.mongodb.net/pythonreactdb?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 
 CORS(app)
