@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo, ObjectId
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 #app.config['MONGO_URI']='mongodb+srv://userMaster:root@cluster0.achiw.mongodb.net/pythonreactdb'
 
@@ -68,6 +67,4 @@ def updateUser(id):
     return jsonify({'msg': 'user updated'})
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
-    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
